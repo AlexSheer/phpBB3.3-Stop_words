@@ -1,0 +1,8 @@
+services:
+    sheer.stop_words.listener:
+        class: sheer\stop_words\event\listener
+        arguments:
+            - '@config_text'
+            - '@user'
+        tags:
+            - { name: event.listener }
